@@ -1,0 +1,15 @@
+node_modules/
+build/
+dist/
+release/
+data/
+artifacts/
+.DS_Store
+__pycache__/
+prototype/web/public/vendor/
+*.moc3
+*.model3.json
+*.pth
+*.onnx
+*.safetensors
+*.ckpt

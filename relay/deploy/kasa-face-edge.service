@@ -1,0 +1,21 @@
+[Unit]
+Description=Kasa Studio face relay TLS
+After=network-online.target kasa-face-relay.service
+Wants=network-online.target
+
+[Service]
+User=kasa-face
+Group=kasa-face
+Environment=XDG_DATA_HOME=/var/lib/kasa-face XDG_CONFIG_HOME=/var/lib/kasa-face
+ExecStart=/usr/local/bin/caddy run --config /etc/kasa-face/Caddyfile --adapter caddyfile
+Restart=always
+RestartSec=3
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+ReadWritePaths=/var/lib/kasa-face
+MemoryMax=128M
+
+[Install]
+WantedBy=multi-user.target

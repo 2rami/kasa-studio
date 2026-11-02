@@ -1,0 +1,20 @@
+[Unit]
+Description=Kasa Studio face value relay
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=kasa-face
+Group=kasa-face
+WorkingDirectory=/opt/kasa-face
+ExecStart=/opt/kasa-face/venv/bin/python /opt/kasa-face/server.py
+Restart=always
+RestartSec=3
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+MemoryMax=128M
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,27 @@
+/* ref: geono-hub/src/styles/global.css · landing.css · 개인사이트 브랜드 */
+@font-face { font-family: Paperlogy; font-weight: 400; src: url('/fonts/Paperlogy-4Regular.ttf') format('truetype'); font-display: swap; }
+@font-face { font-family: Paperlogy; font-weight: 500 800; src: url('/fonts/Paperlogy-5Medium.ttf') format('truetype'); font-display: swap; }
+@font-face { font-family: Paperlogy Black; font-weight: 900; src: url('/fonts/Paperlogy-9Black.woff2') format('woff2'); font-display: swap; }
+@font-face { font-family: Anton; src: url('/fonts/Anton-Regular.woff2') format('woff2'); font-display: swap; }
+:root {
+  --kf-bg: #FBFAF6; --kf-surface: #F4F2EC; --kf-raised: #FFFFFF;
+  --kf-ink: #141414; --kf-ink-soft: #555750; --kf-dim: #7C8077;
+  --kf-line: #DAD9D0; --kf-accent: #19B7F2; --kf-accent-text: #08658A;
+  --kf-accent-soft: #E0F4FA; --kf-on-accent: #102B35; --kf-lime: #DCF26A;
+  --kf-success: #4F7E35; --kf-danger: #BA4142; --kf-warning: #9A7323;
+  --kf-stage: #DCEBF0; --kf-stage-ink: #B0D4E2; --kf-shadow-soft: 0 10px 36px #14141410;
+  --kf-font-sans: Paperlogy, 'Apple SD Gothic Neo', sans-serif;
+  --kf-font-display: Anton, 'Paperlogy Black', sans-serif;
+  --kf-radius-sm: 5px; --kf-radius-md: 9px; --kf-radius-lg: 16px; --kf-radius-pill: 999px;
+  --kf-ease: cubic-bezier(0.16, 1, 0.3, 1); --kf-dur-fast: 180ms;
+  color-scheme: light;
+}
+:root[data-theme='night'] {
+  --kf-bg: #0F1B26; --kf-surface: #142330; --kf-raised: #1A2A38;
+  --kf-ink: #F4FAFE; --kf-ink-soft: #ADBFCB; --kf-dim: #8197A8;
+  --kf-line: #2B4257; --kf-accent: #58B6F8; --kf-accent-text: #81C9FF;
+  --kf-accent-soft: #1B364A; --kf-on-accent: #0F1B26; --kf-lime: #DCF26A;
+  --kf-success: #A3C685; --kf-danger: #F68B8C; --kf-warning: #E5C47A;
+  --kf-stage: #1A2C3A; --kf-stage-ink: #244353; --kf-shadow-soft: 0 10px 36px #00000028;
+  color-scheme: dark;
+}

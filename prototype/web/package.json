@@ -1,0 +1,72 @@
+{
+  "name": "kasa-studio",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "electron/main.mjs",
+  "scripts": {
+    "dev": "node server/index.mjs",
+    "build": "tsc --noEmit && vite build",
+    "start": "node server/index.mjs --production",
+    "desktop": "npm run build && electron .",
+    "test": "node --test tests/*.test.mjs",
+    "check": "npm run build && npm test",
+    "setup": "node scripts/setup.mjs",
+    "package:mac": "npm run build && electron-builder --mac dir"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "fflate": "^0.8.2",
+    "lucide-react": "^0.468.0",
+    "multer": "^2.0.2",
+    "obs-websocket-js": "^5.0.6",
+    "pixi-live2d-display": "0.4.0",
+    "pixi.js": "6.5.10",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "ws": "^8.18.3",
+    "zod": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "electron": "^39.0.0",
+    "electron-builder": "^26.0.0",
+    "playwright-core": "^1.64.1",
+    "typescript": "^5.9.3",
+    "vite": "^7.2.0"
+  },
+  "overrides": {
+    "pixi-live2d-display": {
+      "gh-pages": "^6.3.0"
+    }
+  },
+  "build": {
+    "appId": "com.kasa.studio",
+    "productName": "Kasa Studio",
+    "asar": false,
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**",
+      "server/**",
+      "electron/**",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "data/models/hoodiecat",
+        "to": "models/hoodiecat"
+      }
+    ],
+    "mac": {
+      "category": "public.app-category.video",
+      "extendInfo": {
+        "NSMicrophoneUsageDescription": "방송 아바타의 입 모양과 마이크 입력을 확인합니다."
+      }
+    }
+  }
+}

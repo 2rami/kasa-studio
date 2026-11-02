@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+<key>CFBundleExecutable</key><string>${MACOSX_BUNDLE_EXECUTABLE_NAME}</string>
+<key>CFBundleIdentifier</key><string>com.kasa.studio.native</string>
+<key>CFBundleName</key><string>Kasa Studio Native</string>
+<key>CFBundleDisplayName</key><string>Kasa Studio Native</string>
+<key>CFBundlePackageType</key><string>APPL</string>
+<key>CFBundleVersion</key><string>5</string>
+<key>CFBundleShortVersionString</key><string>0.4.1</string>
+<key>CFBundleIconFile</key><string>AppIcon</string>
+<key>LSMinimumSystemVersion</key><string>12.0</string>
+<key>NSHighResolutionCapable</key><true/>
+<key>NSSupportsAutomaticGraphicsSwitching</key><true/>
+<key>NSMicrophoneUsageDescription</key><string>직접 켠 마이크의 입력 크기로 아바타 입 모양을 움직입니다.</string>
+<key>NSCameraUsageDescription</key><string>직접 켠 카메라로 얼굴의 고개·눈·입 움직임을 추적해 방송 아바타를 움직입니다. 영상은 저장하지 않습니다.</string>
+<key>NSCameraUseContinuityCameraDeviceType</key><true/>
+<key>NSBonjourServices</key><array><string>_kasaface._udp</string></array>
+<key>NSLocalNetworkUsageDescription</key><string>선택한 OBS·Voice Changer 서버와 아이폰 얼굴 추적 앱에 연결합니다.</string>
+<key>NSAppTransportSecurity</key><dict><key>NSAllowsLocalNetworking</key><true/><key>NSAllowsArbitraryLoads</key><true/></dict>
+</dict></plist>
